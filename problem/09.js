@@ -1,4 +1,5 @@
 /**
+import function from '../node_modules/husky/index.d';
  * [09.js]
  *
  * [문제 요구사항]
@@ -18,7 +19,25 @@
  */
 
 // TODO: 아래 코드를 작성하세요.
-class Person {}
-class Employee {}
+class Person {
+    constructor(name){
+        this._name = name;
+    };
+
+    sayHello(){
+        return `Hello, I'm ${this._name}`;
+    }
+}
+
+class Employee extends Person{
+    constructor(name, company){
+        super(name);
+        this._company = company;
+    }
+
+    sayHello(){
+        return `Hello, I'm ${this._name}, I work at ${this._company}`;
+    }
+}
 
 export { Person, Employee };
