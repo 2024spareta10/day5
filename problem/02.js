@@ -9,13 +9,11 @@
  */
 function closureOne() {
     let count = 0;
-    const increment = (function () {
-        return function () {
-            return ++count;
-        };
-    })();
+    
 
-    return increment();
+    return function () {
+        return ++count;
+    };
 
 }
 

@@ -12,7 +12,19 @@
  */
 
 function closureWithParams() {
-    
+    let base = 10;
+
+    return function(op, num){
+        if(op === '+'){
+            return base + num;
+        }
+        else if (op === '-'){
+            return base - num;
+        }
+        else{
+            return "invalid";
+        }
+    };
 }
 
 export { closureWithParams };
